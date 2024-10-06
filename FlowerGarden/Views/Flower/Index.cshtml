@@ -1,0 +1,14 @@
+﻿@model IEnumerable<FlowerGarden.Models.BusinessObjects.FlowerPost>
+
+<h2>Flower Posts</h2>
+
+@foreach (var post in Model)
+{
+    <div class="post">
+        <h3>@post.Title</h3>
+        <p>@post.Description</p>
+        <img src="@post.ImageUrl" alt="Flower Image" width="200" />
+        <p>Posted on: @post.CreatedAt.ToShortDateString()</p>
+    </div>
+    <hr />
+}
